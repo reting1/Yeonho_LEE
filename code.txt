@@ -1,0 +1,10 @@
+I used data pollution which is used in the last class.
+The first one is plot between the variable pop and temp.
+The second one is normal qq-plot of var pop.
+
+1) > plot(pollution$POP, pollution$SO2)
+
+
+
+2) > qqplot(pollution$SO2, pollution$TEMP)
+
