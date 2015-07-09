@@ -1,0 +1,72 @@
+2.
+a. plot
+ 
+b. I draw the abline in the plot between first and second
+>lm(formula = first ~ second)
+
+Coefficients:
+(Intercept)       second  
+     -8.818        1.167  
+> abline(-8.818, 1.167)
+
+it looks positive And also correlation between two variables is
+0.97 so it has strong relationship.
+
+
+
+> first <- c(20,32,35,34,40,51,52,56,57,68)
+> second <- c(23,34,36,44,42,51,54,57,54,62)
+> plot1 <- plot(first,second)
+>lm(formula = first ~ second)
+
+Coefficients:
+(Intercept)       second  
+     -8.818        1.167  
+> abline(-8.818, 1.167)
+
+
+> cor(first,second)
+[1] 0.9690331
+
+c.
+> cor(first,second)
+[1] 0.9690331
+
+
+d.
+> cor1 <- cor(first,second)
+> se1 <-sqrt(1-cor1^2)/length(first)-2
+
+
+e. > compare <- c(first-second)
+> t.test(compare)
+
+	One Sample t-test
+
+data:  compare
+t = -0.91856, df = 9, p-value = 0.3823
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ -4.15527  1.75527
+sample estimates:
+mean of x 
+     -1.2 
+
+
+3.
+It is same regardless of the measure or parallel movement.
+> cor(first,second)
+[1] 0.9690331
+> cor(first,second+30)
+[1] 0.9690331
+> cor(1.5*first, second)
+[1] 0.9690331
+
+
+4.
+
+> RM_plot <- plot(range1, mortality)
+> cor(range1,mortality)
+[1] 0.6469628
+
+They have relationship if we see correlation between range1 and mortality.
