@@ -1,0 +1,13 @@
+library("ElemStatLearn")
+
+
+sub = sample(nrow(spam), floor(nrow(spam)*0.9))
+train = spam[sub,]
+test= spam[-sub, ]
+
+xTrain = train[, -58]
+yTarin = testspam
+
+model = train(xTrain, yTrain, 'nb', trControl-trainControl(method='cv',number=10))
+
+prop.table(table(predict(model$finalmodel,xTest)$class,yTest))
